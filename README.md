@@ -9,6 +9,8 @@ Community ran, non offical Knowledgebase pertaining to the FlipperZero Device, i
 ## Pull Requests welcomed and encouraged
 If youd like to become a permanent collaborator DM Equip#1515 on discord with your associated GitHub information :)
 
+**Please make sure any info docs added are in markdown format and file extension so they can be viewed natively in github**
+
 
 
 | [Flipper Store](https://shop.flipperzero.one/) | [Flipper Discord](https://discord.gg/rTCJjgy9J7) | [Flipper Firmware](https://github.com/flipperdevices/flipperzero-firmware) |
