@@ -26,9 +26,11 @@ If youd like to become a permanent collaborator DM Equip#1515 on discord with yo
 - [QFlipper](https://github.com/equipter/flipper-knowledgebase/tree/main/QFlipper)
 - [Mobile App](https://github.com/equipter/flipper-knowledgebase/tree/main/Mobile-App)
 - [Plugins](https://github.com/equipter/flipper-knowledgebase/tree/main/Plugins)
+- [Misc](https://github.com/equipter/flipper-knowledgebase/tree/main/misc)
 
 ## Authors
 
 - [@Equipter](https://www.github.com/equipter)
 - [@Daedalus-](https://github.com/Daedalus-)
+- [@forbiddenpineapple](https://github.com/forbiddenpineapple)
 
