@@ -20,11 +20,11 @@ In summary: by looking thru the credential with a high powered flashlight, you m
 
 ![LF vs HF Card Antennas](https://habrastorage.org/r/w1560/webt/hi/dc/ki/hidckijb-wsscmuqutxmkeeuama.jpeg)
 
-Low frequency credentials can be handled by Flipper Zero's **125kHz** application, for additional information see:
+Low Frequency credentials can be handled by Flipper Zero's **125kHz** application, for additional information see:
 - https://docs.flipperzero.one/rfid
 - https://github.com/equipter/flipper-knowledgebase/tree/main/125khz-rfid
 
-High frequency credentials can be handled by Flipper Zero's **NFC** application, for additional information see:
+High Frequency credentials can be handled by Flipper Zero's **NFC** application, for additional information see:
 - https://docs.flipperzero.one/nfc
 - https://github.com/equipter/flipper-knowledgebase/tree/main/NFC
 
@@ -75,6 +75,20 @@ The table below lists some of the common types of Low Frequency credential types
 <a href="https://m.media-amazon.com/images/I/71LWBXxiF5L._AC_SL1500_.jpg"><img src="https://m.media-amazon.com/images/I/71LWBXxiF5L._AC_SL1500_.jpg" alt="HID Prox Fob"></a>
 </td>
 <td>Additional protocols are technically comatbile with Flipper Zero and may be added in the future. </td>
+</tr>
+<tr>
+<td>HID</td>
+<td>iClass</td>
+<td>
+iClass contain both Low Frequency and High Frequency chips, some systems may use LF or HF and some may use both.<br>
+For LF, the system is similar to HID Prox (above).<br>
+For HF, see the iClass row under High Frequency credentials.
+</td>
+<td>
+<a href="https://www.hidglobal.com/sites/default/files/iclass_clamshell2.png"><img src="https://www.hidglobal.com/sites/default/files/iclass_clamshell2.png" alt="HID iClass Fob"></a>
+<a href="https://www.hidglobal.com/sites/default/files/iclass_keyfob-ii_0.png"><img src="https://www.hidglobal.com/sites/default/files/iclass_keyfob-ii_0.png" alt="HID iClass Fob"></a>
+</td>
+<td>See rows for HID Prox and HID iClass.</td>
 </tr>
 <tr>
 <td>Motorola/HID</td>
@@ -135,7 +149,7 @@ A popular brand is "Yarongtech", which is available on Amazon.
 
 
 # High Frequency Credentials
-((HF Hardware Description))
+Flipper Zero's hardware includes a dedicated High Frequency/NFC chip: the [ST25R3916](https://www.st.com/resource/en/datasheet/st25r3916.pdf). This chip handles the communication with High Frequency devices in conjunction with the MCU.
 
 There are also a wide variety of High Frequency/NFC credential types. These types of credentials are common for:
 
@@ -146,7 +160,11 @@ There are also a wide variety of High Frequency/NFC credential types. These type
 Credit/debit cards also use the NFC protocol, but operate on a specific system called "EMV". See xxx for additional information on EMV.
 
 ## High Frequency Protocols
-((Protocols Introduction))
+There are an wide variety of High Frequency access card protocols. 
+
+Flipper Zero's official NFC documentation lists the official supported credentials: [Flipper Zero NFC Documentation](https://docs.flipperzero.one/nfc)
+
+The table below lists some of the common types of High Frequency credential types and their current status:
 <table>
 <tbody>
 <tr>
@@ -154,26 +172,101 @@ Credit/debit cards also use the NFC protocol, but operate on a specific system c
 <th>Name</th>
 <th>Common Uses</th>
 <th>Encryption</th>
-<th>Flipper Zero Status</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
 <th>Future Plans</th>
 </tr>
 <tr>
 <td>NXP</td>
-<td>Mifare Classic</td>
+<td>MIFARE Classic</td>
 <td>
 <ul>
 <li>Hotel Room Keys</li>
-<li>Transit System Cards</li>
+<li>Older Transit System Cards</li>
 </td>
 <td>Unencrypted</td>
+<td>Partial</td>
+<td>No</td>
+<td>In Progress</td>
+<td>Emulation currently in development.</td>
+</tr>
+<tr>
+<td>NXP</td>
+<td>MIFARE DESFIRE</td>
 <td>
-<table>
-<tr><td><i>Read: </i><br>Partially Supported</td></tr>
-<tr><td><i>Write: </i><br>Not Supported</td></tr>
-<tr><td><i>Emulate: </i><br>Not Supported</td></tr>
-</table>
+<ul>
+<li>Secure Access Control Systems</li>
+<li>Some Newer Transit System Cards</li>
+</ul>
 </td>
-<td>Emulation currently in development</td>
+<td><b>Very</b> Encrypted</td>
+<td>UID Only</td>
+<td>No</td>
+<td>No</td>
+<td>Likely to never be supported due to encryption.</td>
+</tr>
+<tr>
+<td>NXP</td>
+<td>MIFARE Plus (X and S)</td>
+<td>
+<ul>
+<li>Secure Access Control Systems</li>
+<li>Some Newer Transit System Cards</li>
+</ul>
+</td>
+<td>Encrypted (AES-128)</td>
+<td>UID Only</td>
+<td>No</td>
+<td>No</td>
+<td>Likely to never be supported due to encryption.</td>
+</tr>
+<tr>
+<td>NXP</td>
+<td>MIFARE Ultralight</td>
+<td>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HID</td>
+<td>iClass</td>
+<td>
+Access Control Systems
+</td>
+<td></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>HID</td>
+<td>iClass SE</td>
+<td>
+Access Control Systems
+</td>
+<td></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>HID</td>
+<td>iClass SEOS</td>
+<td>
+Access Control Systems
+</td>
+<td></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
 </tr>
 </table>
 
