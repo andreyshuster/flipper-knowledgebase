@@ -69,7 +69,7 @@ The table below lists some of the common types of Low Frequency credential types
 <tr><td><i>Read: </i><br>Partially Supported</td></tr>
 <tr><td><i>Write: </i><br>Partially Supported</td></tr>
 <tr><td><i>Emulate: </i><br>Partially Supported</td></tr>
-<tr><td><li>May contain non-supported protocols</li></td></tr>
+<tr><td>May contain non-supported protocols</td></tr>
 </table>
 </td>
 <td>Additional protocols are technically comatbile with Flipper Zero and may be added in the future. </td>
@@ -91,7 +91,7 @@ The table below lists some of the common types of Low Frequency credential types
 <tr><td><i>Read: </i><br>Partially Supported</td></tr>
 <tr><td><i>Write: </i><br>Partially Supported</td></tr>
 <tr><td><i>Emulate: </i><br>Partially Supported</td></tr>
-<tr><td><li>May contain non-supported protocols</li></td></tr>
+<tr><td>May contain non-supported protocols</td></tr>
 </table>
 </td>
 <td>Additional protocols are technically compatible with Flipper Zero and may be added in the future. </td>
