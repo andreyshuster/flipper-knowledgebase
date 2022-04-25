@@ -48,74 +48,81 @@ The table below lists some of the common types of Low Frequency credential types
 <tr>
 <th>Brand</th>
 <th>Name</th>
-<th>Supported Protocols/Encodings</th>
+<th>Protocols and Status</th>
 <th>Photos</th>
-<th>Flipper Zero Status</th>
 <th>Future Plans</th>
 <tr>
 <td>HID</td>
 <td>Prox</td>
 <td>
-<ul>
-<li>H10301 (HID26/HID PROX II)</li>
-</ul>
+<table align="center" style="width:100%">
+<tr>
+<th>Protocol</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
+</tr>
+<tr>
+<td>H10301 (HID26/HID PROX II)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</table>
 </td>
 <td>
 <a href="https://www.idesco.com/picts/products/hid-proxcard-ii-1326.png"><img src="https://www.idesco.com/picts/products/hid-proxcard-ii-1326.png" alt="HID Prox Fob"></a>
 <a href="https://m.media-amazon.com/images/I/71LWBXxiF5L._AC_SL1500_.jpg"><img src="https://m.media-amazon.com/images/I/71LWBXxiF5L._AC_SL1500_.jpg" alt="HID Prox Fob"></a>
-</td>
-<td>
-<table>
-<tr><td><i>Read: </i><br>Partially Supported</td></tr>
-<tr><td><i>Write: </i><br>Partially Supported</td></tr>
-<tr><td><i>Emulate: </i><br>Partially Supported</td></tr>
-<tr><td>May contain non-supported protocols</td></tr>
-</table>
 </td>
 <td>Additional protocols are technically comatbile with Flipper Zero and may be added in the future. </td>
 </tr>
 <tr>
 <td>Motorola/HID</td>
 <td>Indala</td>
-<td>
-<ul>
-<li>I40134</li>
-</ul>
+<td align="center">
+<table style="width:100%">
+<tr>
+<th>Protocol</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
+</tr>
+<tr>
+<td>I40134</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</table>
 </td>
 <td>
 <a href="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png" alt="Indala Clamshell"></a>
 <a href="https://cdn.shopify.com/s/files/1/0173/0271/6516/products/Indala_Fob_A_1024x1024.png?v=1547950599"><img src="https://cdn.shopify.com/s/files/1/0173/0271/6516/products/Indala_Fob_A_1024x1024.png?v=1547950599" alt="Indala Fob"></a>
 </td>
-<td>
-<table>
-<tr><td><i>Read: </i><br>Partially Supported</td></tr>
-<tr><td><i>Write: </i><br>Partially Supported</td></tr>
-<tr><td><i>Emulate: </i><br>Partially Supported</td></tr>
-<tr><td>May contain non-supported protocols</td></tr>
-</table>
-</td>
 <td>Additional protocols are technically compatible with Flipper Zero and may be added in the future. </td>
 </tr>
 <tr>
 <td>EM-Marin</td>
-<td>
-<ul>
-<li>EM4100</li>
-</ul>
-</td>
-<td>
-All
-</td>
-<td>
-</td>
-<td>
-<table>
-<tr><td><i>Read: </i><br>Supported</td></tr>
-<tr><td><i>Write: </i><br>Supported</td></tr>
-<tr><td><i>Emulate: </i><br>Supported</td></tr>
+<td align="center" colspan="2">
+<table style="width:100%">
+<tr>
+<th>Chip</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
+</tr>
+<tr>
+<td>EM4100</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </table>
 </td>
-<td> </td>
+<td>
+</td>
+<td>
+</td>
 </tr>
 </table>
 
