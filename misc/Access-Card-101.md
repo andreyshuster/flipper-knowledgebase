@@ -119,6 +119,13 @@ All
 </tr>
 </table>
 
+## Cloning Low Frequency Credentials
+For supported types, Flipper Zero also supports writing stored Low Frequency credentials to rewriteable cards/fobs. The most common and preferred type of rewriteable device are based on the **T5577** chip. These devices can come in all form factors (fob, card, implant, etc) but all work the same.
+
+T5577 devices can be sourced online on Amazon, eBay, AliExpress, etc.
+
+A popular brand is "Yarongtech", which is available on Amazon.
+
 
 # High Frequency Credentials
 ((HF Hardware Description))
