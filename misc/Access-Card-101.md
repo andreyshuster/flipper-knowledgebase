@@ -156,6 +156,9 @@ There are also a wide variety of High Frequency/NFC credential types. These type
  - Transit Passes/Cards
  - Hotel Keys
 
+## UIDs
+
+
 ## Payment Cards
 Credit/debit cards also use the NFC protocol, but operate on a specific system called "EMV". See xxx for additional information on EMV.
 
