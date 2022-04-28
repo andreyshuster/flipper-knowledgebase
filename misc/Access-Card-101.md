@@ -1,6 +1,7 @@
 
 
 
+
 # "Access Cards" 101 (Work In Progress)
 
 Flipper Zero is very skilled at reading access cards (referred to here as "Credentials") of all types. This FAQ will discuss the various types of access credentials and Flipper Zero's capabilities.
@@ -68,6 +69,12 @@ The table below lists some of the common types of Low Frequency credential types
 <td>Yes</td>
 <td>Yes</td>
 </tr>
+<tr>
+<td>Others</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
 </table>
 </td>
 <td>
@@ -110,8 +117,8 @@ For HF, see the iClass row under High Frequency credentials.
 </table>
 </td>
 <td>
-<a href="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png" alt="Indala Clamshell"></a>
 <a href="https://cdn.shopify.com/s/files/1/0173/0271/6516/products/Indala_Fob_A_1024x1024.png?v=1547950599"><img src="https://cdn.shopify.com/s/files/1/0173/0271/6516/products/Indala_Fob_A_1024x1024.png?v=1547950599" alt="Indala Fob"></a>
+<a href="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/fpcrd_Indala_26_Bit_FlexPass_Proximity_Card_Front_1.png" alt="Indala Clamshell"></a>
 </td>
 <td>Additional protocols are technically compatible with Flipper Zero and may be added in the future. </td>
 </tr>
@@ -138,6 +145,30 @@ For HF, see the iClass row under High Frequency credentials.
 <td>
 </td>
 </tr>
+<tr>
+<td colspan=2>AWID</td>
+<td align="center">
+<table style="width:100%">
+<tr>
+<th>Protocol</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
+</tr>
+<tr>
+<td>ALL</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</table>
+</td>
+<td>
+<a href="https://cdn.adiglobaldistribution.us/adina/1018890628_lg.jpg"><img src="https://cdn.adiglobaldistribution.us/adina/1018890628_lg.jpg" alt="AWID KT Key Fob"></a>
+<a href="https://globalgatecontrols.com/app/uploads/2020/02/CS_AWID_CS_Proximity_Card_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/CS_AWID_CS_Proximity_Card_Front_1.png" alt="AWID Key Card"></a>
+</td>
+<td>LF AWID cards are technically compatible with Flipper Zero's hardware and may be supported in the future. </td>
+</tr>
 </table>
 
 ## Cloning Low Frequency Credentials
@@ -156,7 +187,13 @@ There are also a wide variety of High Frequency/NFC credential types. These type
  - Transit Passes/Cards
  - Hotel Keys
 
-## UIDs
+## Card Structure/UIDs
+High Frequency cards are different than Low Frequency cards. While Low Frequency cards are often "dumb" and just contain a single identifying number which they transmit to the receiver, High Frequency cards are often equipped with more intelligent chips which store data and provide other functions (including encryption).
+
+A large portion of HF cards are based around the ISO 14443 standard (with the exception of some MIFARE types). All ISO 14443 cards have what is called a "UID" or unique ID. This is in essence the card's serial number and is never encrypted (it may even be printed on the card exterior). Flipper Zero should be able to read the UID of most HF cards and emulate the UID. Some rudimentary High Frequency access control systems use only the UID for authentication and can thus easily work with Flipper Zero.
+
+Additional data is available on cards beyond the UID, but this data is accessed using different protocols and may be encrypted or otherwise unreadable without specific keys or programming.
+
 
 
 ## Payment Cards
