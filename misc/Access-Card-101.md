@@ -2,7 +2,7 @@
 
 
 
-# "Access Cards" 101 (Work In Progress)
+# "Access Cards" 101
 
 Flipper Zero is very skilled at reading access cards (referred to here as "Credentials") of all types. This FAQ will discuss the various types of access credentials and Flipper Zero's capabilities.
 
@@ -64,10 +64,15 @@ The table below lists some of the common types of Low Frequency credential types
 <th>Emulate</th>
 </tr>
 <tr>
-<td>H10301 (HID26/HID PROX II)</td>
+<td>H10301 (HID26)</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
+</tr>
+<td>H10302 (HID37)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>Others</td>
@@ -164,10 +169,37 @@ For HF, see the iClass row under High Frequency credentials.
 </table>
 </td>
 <td>
-<a href="https://cdn.adiglobaldistribution.us/adina/1018890628_lg.jpg"><img src="https://cdn.adiglobaldistribution.us/adina/1018890628_lg.jpg" alt="AWID KT Key Fob"></a>
+<a href="https://globalgatecontrols.com/app/uploads/2020/02/KT_%20AWID_KT_Proximity_Fob_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/KT_%20AWID_KT_Proximity_Fob_Front_1.png" alt="AWID KT Key Fob"></a>
 <a href="https://globalgatecontrols.com/app/uploads/2020/02/CS_AWID_CS_Proximity_Card_Front_1.png"><img src="https://globalgatecontrols.com/app/uploads/2020/02/CS_AWID_CS_Proximity_Card_Front_1.png" alt="AWID Key Card"></a>
 </td>
 <td>LF AWID cards are technically compatible with Flipper Zero's hardware and may be supported in the future. </td>
+</tr>
+<tr>
+<td>Schlage</td>
+<td>7x10</td>
+<td>
+<table align="center" style="width:100%">
+<tr>
+<th>Protocol</th>
+<th>Read</th>
+<th>Write</th>
+<th>Emulate</th>
+</tr>
+<tr>
+<td>"26 bit" = H10301</td>
+<td align="center" colspan=3>Supported, see <br>H10301 under HID Prox.</td>
+</tr>
+<tr>
+<td>"37 bit" = H10302</td>
+<td align="center" colspan=3>Unsupported, see <br>H10301 under HID Prox.</td>
+</tr>
+</table>
+</td>
+<td>
+<a href="https://cdn2.bigcommerce.com/n-zfvgw8/ke40w/products/140/images/484/SC_PVC_Patch_HO_Low-res_image_if_available__80688.1510334231.1280.1280.jpg?c=2"><img src="https://cdn2.bigcommerce.com/n-zfvgw8/ke40w/products/140/images/484/SC_PVC_Patch_HO_Low-res_image_if_available__80688.1510334231.1280.1280.jpg?c=2" alt="Schlage 7510 Card"></a>
+<a href="https://cdn2.bigcommerce.com/n-zfvgw8/ke40w/products/147/images/498/SC_Keyfob-2_HO_Low-res_image_if_available__18735.1510334229.1280.1280.jpg?c=2"><img src="https://cdn2.bigcommerce.com/n-zfvgw8/ke40w/products/147/images/498/SC_Keyfob-2_HO_Low-res_image_if_available__18735.1510334229.1280.1280.jpg?c=2" alt="Schlage 7610 Fob"></a>
+</td>
+<td>See HID Prox.</td>
 </tr>
 </table>
 
@@ -192,7 +224,7 @@ High Frequency cards are different than Low Frequency cards. While Low Frequency
 
 A large portion of HF cards are based around the ISO 14443 standard (with the exception of some MIFARE types). All ISO 14443 cards have what is called a "UID" or unique ID. This is in essence the card's serial number and is never encrypted (it may even be printed on the card exterior). Flipper Zero should be able to read the UID of most HF cards and emulate the UID. Some rudimentary High Frequency access control systems use only the UID for authentication and can thus easily work with Flipper Zero.
 
-Additional data is available on cards beyond the UID, but this data is accessed using different protocols and may be encrypted or otherwise unreadable without specific keys or programming.
+Additional data is available on cards beyond the UID, but this data is accessed using different protocols and may be encrypted or otherwise unreadable without specific keys or programming. This is why emulating the UID often will not work to gain access to systems secured with High Frequency credentials.
 
 
 
